@@ -1,17 +1,20 @@
+import { Container } from './Statistics.styled';
+import { List } from './Statistics.styled';
+import { HeaderFirst } from './Statistics.styled.js'
 export const Statistics = ({ title, stats }) => {
   // console.log(props.data)
   return (
-    <section class="statistics">
+    <Container class="statistics">
       <h2 className="title">{title}</h2>
 
-      <ul class="stat-list">
+      <HeaderFirst class="stat-list">
         {stats.map(item => (
-          <li class="item" key={item.id}>
+          <List class="item" key={item.id}>
             <span class="label">{item.label}</span>
             <span class="percentage">{item.percentage}%</span>
-          </li>
+          </List>
         ))}
-      </ul>
-    </section>
+      </HeaderFirst>
+    </Container>
   );
 };
