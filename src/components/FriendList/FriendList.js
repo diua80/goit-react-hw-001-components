@@ -1,13 +1,14 @@
-import { FriendCard } from "components/FriendCard";
+import { FriendCard } from "components/FriendList/FriendCard";
+import { List, ItmWrapper } from "./FriendList.styled";
 
 export const FriendsList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <List className="friend-list">
       {friends.map((item) => (
-          <li key={item.id}>
+          <ItmWrapper key={item.id}>
               <FriendCard friends={item} />
-          </li>
+          </ItmWrapper>
       ))}
-    </ul>
+    </List>
   );
 };

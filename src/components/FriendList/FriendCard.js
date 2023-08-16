@@ -1,5 +1,8 @@
-export const FriendCard = ({friends}) => {
-    return <div> <span className={friends.isOnline? 'online' : 'offline'}></span>
+import { Itm, StatusDot } from "./FriendList.styled";
+
+export const FriendCard = ({ friends }) => {
+  return <Itm>
+    <StatusDot isOnline={friends.isOnline}></StatusDot>
           <img
             src={friends.avatar}
             alt="User avatar"
@@ -7,5 +10,5 @@ export const FriendCard = ({friends}) => {
             width="48"
           />
         <p class="name">{friends.name}</p>
-    </div>
+    </Itm>
 }

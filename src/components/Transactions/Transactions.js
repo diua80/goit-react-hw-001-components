@@ -1,21 +1,21 @@
+import {Table, Row, THead} from "./Transaction.styled"
 export const TransactionHistory = ({ items }) => {
   return (
-    <table class="transaction-history">
-      TransactionsTable
-      <thead>
-        <tr>
+    <Table class="transaction-history">
+      <THead>
+        <Row>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
-        </tr>
-      </thead>
+        </Row>
+      </THead>
       {items.map(item => (
-        <tr>
+        <Row>
           <td>{item.type}</td>
           <td>{item.amount}</td>
           <td>{item.currency}</td>
-        </tr>
+        </Row>
       ))}
-    </table>
+    </Table>
   );
 };

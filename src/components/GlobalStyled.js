@@ -1,16 +1,21 @@
-// @import-normalize;
+import 'modern-normalize';
 import { createGlobalStyle } from 'styled-components';
 export const GlobalStyled = createGlobalStyle`
 body {
-    background-color: #ffde4712;
-    margin: 0;
-    padding: 0;
-    width: 1158px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // text-align: center;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 img {
   display: block;
   max-width: 100%;

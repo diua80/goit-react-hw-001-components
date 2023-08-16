@@ -1,11 +1,9 @@
-import { Container } from './Statistics.styled';
-import { List } from './Statistics.styled';
-import { HeaderFirst } from './Statistics.styled.js'
+import { Container, List, HeaderFirst, Header } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   // console.log(props.data)
   return (
     <Container class="statistics">
-      <h2 className="title">{title}</h2>
+      <Header className="title">{title}</Header>
 
       <HeaderFirst class="stat-list">
         {stats.map(item => (

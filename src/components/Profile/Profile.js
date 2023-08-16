@@ -1,7 +1,9 @@
-import {Image} from './Profile.styled'
+import {Image, List, ListItm, Wrapper} from './Profile.styled'
+
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
+    <Wrapper class="profile">
       <div class="description">
         <Image
           src={avatar}
@@ -14,21 +16,21 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         <p class="location">{location}</p>
       </div>
 
-      <ul class="stats">
-        <li>
+      <List class="stats">
+        <ListItm>
           <span class="label">Followers</span>
           <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
+        </ListItm>
+        <ListItm>
           <span class="label">Views</span>
           <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
+        </ListItm>
+        <ListItm>
           <span class="label">Likes</span>
           <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        </ListItm>
+      </List>
+    </Wrapper>
   );
 };
 //* у нас є дані у файлі data.json і нам треба щоб компонент Profile їх зарендерив на сторінку! Як це зробити?
